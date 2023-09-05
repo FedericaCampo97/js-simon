@@ -18,6 +18,13 @@ let seconds = differtsTime / 1000
 let minuts = seconds / 60
 let hours = minuts /  60
 
-console.log(hours)
+let hoursCountdown = Math.floor(hours)
+console.log(hoursCountdown)
+let minutsDif = (hours - hoursCountdown) * 60;
+console.log(minutsDif)
+let minutsCountdown = Math.floor(minutsDif)
+console.log(minutsCountdown)
+
+
 //stampo in console il risultato ogni secondo
 
