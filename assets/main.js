@@ -30,5 +30,10 @@ let secondsCountdown = Math.floor(secondsDif);
 console.log(minutsCountdown)
 
 console.log (hoursCountdown + ':' + minutsCountdown + ':' + secondsCountdown)
-//stampo in console il risultato ogni secondo
+
+//Metto in funzione il countdown 
+setInterval (countdown , 1000); 
+function countdown() {
+    
+}
 
