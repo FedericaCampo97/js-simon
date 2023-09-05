@@ -5,7 +5,11 @@ di domani mattina!*/
 
 
 //data odierna
+const now = new Date()
+console.log(now)
 //data dell'evento
+let eventDate = new Date('06/09/2023 09:30:00');
+console.log(eventDate)
 //ricavo i millisecondi da adesso all'evento
 //trasformo i millisecondi in secondi, minuti e ore
 //stampo in console il risultato ogni secondo
