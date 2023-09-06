@@ -6,7 +6,7 @@ di domani mattina!*/
 
 
 //data dell'evento
-let eventDate = new Date('09/06/2023 09:30:00');
+let eventDate = new Date('09/06/2023 23:35:00');
 console.log(eventDate)
 
 //Metto in funzione il countdown 
@@ -17,27 +17,34 @@ function countdown() {
     
     //ricavo i millisecondi da adesso all'evento
     let differtsTime = eventDate - now
-    
-    //trasformo i millisecondi in secondi, minuti e ore
-    let seconds = differtsTime / 1000
-    let minuts = seconds / 60
-    let hours = minuts /  60
 
-    let hoursCountdown = Math.floor(hours);
-    
-    let minutsDif = (hours - hoursCountdown) * 60;
+    if (differtsTime >= 0) {
+        //trasformo i millisecondi in secondi, minuti e ore
+        let seconds = differtsTime / 1000
+        let minuts = seconds / 60
+        let hours = minuts /  60
 
-    
-    let minutsCountdown = Math.floor(minutsDif);
-    
-    let secondsDif = (minutsDif - minutsCountdown) * 60;
-    
-    let secondsCountdown = Math.floor(secondsDif);
-    
-    console.log (
+        let hoursCountdown = Math.floor(hours);
         
-        String("0" + hoursCountdown).slice(-2) + ':' + 
-        String("0" + minutsCountdown).slice(-2) + ':' + 
-        String("0" + secondsCountdown).slice(-2))
+        let minutsDif = (hours - hoursCountdown) * 60;
+
+        
+        let minutsCountdown = Math.floor(minutsDif);
+        
+        let secondsDif = (minutsDif - minutsCountdown) * 60;
+        
+        let secondsCountdown = Math.floor(secondsDif);
+        
+        console.log (
+            String("0" + hoursCountdown).slice(-2) + ':' + 
+            String("0" + minutsCountdown).slice(-2) + ':' + 
+            String("0" + secondsCountdown).slice(-2)
+        )
+    } else {
+        clearInterval(differtsTime)
+    }
+    
+
+    
 }
 
